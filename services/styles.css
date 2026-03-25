@@ -1,0 +1,16 @@
+/* ===== BASE THEME STYLES ===== */
+    /* Mobile-first cream background with teal and gold brand accents */
+    body { font-family: 'DM Sans', sans-serif; background: #f8f3e8; color: #17363a; }
+    .font-display { font-family: 'Playfair Display', serif; }
+    .text-brand-teal { color: #1a6b6b; }
+    .text-brand-gold { color: #c9963c; }
+    .bg-brand-teal { background-color: #1a6b6b; }
+    .bg-brand-gold { background-color: #c9963c; }
+    .border-brand-gold { border-color: #c9963c; }
+    .shadow-soft { box-shadow: 0 10px 30px rgba(26, 107, 107, 0.10); }
+    .card-hover { transition: transform .25s ease, box-shadow .25s ease; }
+    .card-hover:hover { transform: translateY(-4px); box-shadow: 0 18px 40px rgba(26, 107, 107, 0.14); }
+    .nav-active { color: #1a6b6b; background: rgba(26, 107, 107, 0.08); }
+    .tag-pill { background: rgba(26, 107, 107, 0.09); color: #1a6b6b; }
+    .gold-button { background: linear-gradient(135deg, #c9963c, #d8b05a); }
+    .gold-button:hover { filter: brightness(0.96); }
