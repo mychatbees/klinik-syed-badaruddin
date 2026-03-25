@@ -1,0 +1,24 @@
+/* ===== BASE TYPOGRAPHY & THEME ===== */
+    /* Cream background with teal and gold accents; mobile-first spacing for safe edges */
+    :root{
+      --teal:#1a6b6b;
+      --gold:#c9963c;
+      --cream:#fbf6ec;
+      --ink:#143436;
+    }
+    html{scroll-behavior:smooth}
+    body{
+      font-family:'DM Sans',sans-serif;
+      background:var(--cream);
+      color:var(--ink);
+    }
+    .font-display{font-family:'Playfair Display',serif}
+    .brand-gradient{
+      background:linear-gradient(135deg,#145b5b 0%, #1a6b6b 55%, #2a8a86 100%);
+    }
+    .gold-gradient{
+      background:linear-gradient(135deg,#c9963c 0%, #d8aa57 100%);
+    }
+    .soft-shadow{box-shadow:0 18px 45px rgba(19,72,72,.10)}
+    .glass-card{backdrop-filter:blur(8px); background:rgba(255,255,255,.80)}
+    .nav-active{color:var(--gold)}
