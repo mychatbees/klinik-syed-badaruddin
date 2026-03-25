@@ -1,0 +1,40 @@
+/* ===== GLOBAL BASE STYLES ===== */
+    /* Typography, colors, and smooth scrolling for a polished FAQ experience */
+    :root {
+      --teal: #1a6b6b;
+      --gold: #c9963c;
+      --cream: #fbf7ef;
+      --ink: #183132;
+    }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: "DM Sans", sans-serif;
+      background: linear-gradient(180deg, #fffdf8 0%, var(--cream) 100%);
+      color: var(--ink);
+    }
+    h1, h2, h3, .brand-font {
+      font-family: "Playfair Display", serif;
+    }
+
+    /* ===== ACCORDION ANIMATION STYLES ===== */
+    /* Smooth open/close transitions for FAQ panels */
+    .faq-panel {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.35s ease, padding 0.35s ease;
+    }
+    .faq-item.active .faq-panel {
+      padding-top: 0.25rem;
+    }
+
+    /* ===== ACTIVE NAV AND FOCUS STATES ===== */
+    /* Accessible visual feedback for navigation and interactive elements */
+    .nav-active {
+      color: var(--gold);
+    }
+    .nav-link:focus-visible,
+    .accordion-btn:focus-visible,
+    .cta-button:focus-visible {
+      outline: 3px solid rgba(201, 150, 60, 0.45);
+      outline-offset: 3px;
+    }
