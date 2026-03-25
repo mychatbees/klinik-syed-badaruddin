@@ -1,0 +1,17 @@
+/* ===== BASE TYPOGRAPHY & THEME ===== */
+    body { font-family: 'DM Sans', sans-serif; background: #f7f1e6; color: #134848; }
+    .font-display { font-family: 'Playfair Display', serif; }
+    .brand-teal { color: #1a6b6b; }
+    .brand-gold { color: #c9963c; }
+    .bg-brand-teal { background-color: #1a6b6b; }
+    .bg-brand-gold { background-color: #c9963c; }
+    .border-brand-gold { border-color: #c9963c; }
+    .shadow-soft { box-shadow: 0 12px 35px rgba(26,107,107,0.12); }
+
+    /* ===== HERO GRADIENT ===== */
+    .hero-gradient {
+      background: linear-gradient(135deg, #1a6b6b 0%, #246f74 55%, #0f4f4f 100%);
+    }
+
+    /* ===== SMOOTH ANCHOR OFFSET ===== */
+    html { scroll-behavior: smooth; }
