@@ -1,0 +1,25 @@
+/* ===== GLOBAL BASE STYLES ===== */
+    /* Mobile-first typography and smooth rendering */
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: #f8f1e4;
+      color: #17353a;
+    }
+
+    /* ===== HEADING FONT STYLES ===== */
+    /* Elegant serif headings for premium medical branding */
+    .font-heading {
+      font-family: 'Playfair Display', serif;
+    }
+
+    /* ===== CUSTOM ACCENT STYLES ===== */
+    /* Subtle shadows and borders to reinforce trust and clarity */
+    .soft-shadow {
+      box-shadow: 0 12px 30px rgba(26, 107, 107, 0.10);
+    }
+
+    /* ===== SMOOTH SCROLL ===== */
+    /* Improves in-page navigation usability */
+    html {
+      scroll-behavior: smooth;
+    }
