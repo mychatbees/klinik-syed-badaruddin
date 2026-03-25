@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700;800&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+  
+
+<!-- SEO Meta Tags -->
+<title>Soalan Lazim Klinik Syed Badaruddin | Kemaman, Terengganu</title>
+<meta name="description" content="Halaman Soalan Lazim Klinik Syed Badaruddin di Jalan Air Putih, Kemaman, Terengganu. Semak waktu operasi, panel insurans, temujanji, pembayaran, KAD Sejahtera dan perkhidmatan klinik." />
+<meta property="og:title" content="Soalan Lazim Klinik Syed Badaruddin | Kemaman, Terengganu" />
+<meta property="og:description" content="Halaman Soalan Lazim Klinik Syed Badaruddin di Jalan Air Putih, Kemaman, Terengganu. Semak waktu operasi, panel insurans, temujanji, pembayaran, KAD Sejahtera dan perkhidmatan klinik." />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Soalan Lazim Klinik Syed Badaruddin | Kemaman, Terengganu" />
+<meta name="twitter:description" content="Halaman Soalan Lazim Klinik Syed Badaruddin di Jalan Air Putih, Kemaman, Terengganu. Semak waktu operasi, panel insurans, temujanji, pembayaran, KAD Sejahtera dan perkhidmatan klinik." />
+<!-- End SEO Meta Tags -->
+
+<script data-field-replace>
+(function(){
+  var params=new URLSearchParams(window.location.search);
+  var fields={};
+  var paramMap={
+    'first_name':'firstName','last_name':'lastName','full_name':'fullName',
+    'email':'email','phone':'phone','company':'company',
+    'city':'city','state':'state','country':'country'
+  };
+  var skipTags={'SCRIPT':1,'STYLE':1,'NOSCRIPT':1,'TEXTAREA':1,'CODE':1,'PRE':1};
+  var hasUrlFields=false;
+  for(var p in paramMap){
+    var v=params.get(p);
+    if(v){fields[paramMap[p]]=v;hasUrlFields=true;}
+  }
+  var contactId=params.get('contact_id');
+  function esc(s){
+    if(!s)return s;
+    var d=document.createElement('div');
+    d.appendChild(document.createTextNode(s));
+    return d.innerHTML;
+  }
+  function doReplace(data){
+    var r={};
+    r['{{full_name}}']=esc(((data.firstName||'')+' '+(data.lastName||'')).trim()||((data.fullName||data.name)||''));
+    r['{{first_name}}']=esc(data.firstName||(data.name?data.name.split(' ')[0]:'')||'');
+    r['{{last_name}}']=esc(data.lastName||(data.name&&data.name.indexOf(' ')>-1?data.name.substring(data.name.indexOf(' ')+1):'')||'');
+    r['{{email}}']=esc(data.email||'');
+    r['{{phone}}']=esc(data.phone||'');
+    r['{{company}}']=esc(data.company||'');
+    r['{{city}}']=esc(data.city||'');
+    r['{{state}}']=esc(data.state||'');
+    r['{{country}}']=esc(data.country||'');
+    r['{{date}}']=new Date().toLocaleDateString();
+    r['{{time}}']=new Date().toLocaleTimeString();
+    r['{{location}}']=[data.city,data.state,data.country].filter(Boolean).join(', ');
+    r['{{tracking_id}}']=esc(data.trackingId||'');
+    r['{{lastClickedProduct}}']=esc(data.lastClickedProduct||'');
+    r['{{lastProductClickDate}}']=esc(data.lastProductClickDate||'');
+    r['{{lastClickedProductPrice}}']=esc(data.lastClickedProductPrice||'');
+    r['{{lastClickedProductURL}}']=esc(data.lastClickedProductURL||'');
+    r['{{productsClickedCount}}']=esc(data.productsClickedCount||'0');
+    r['{{ip_address}}']=esc(data.ipAddress||'');
+    r['{{ip}}']=esc(data.ipAddress||'');
+    if(data.customFields){
+      for(var k in data.customFields){
+        r['{{'+k+'}}']=esc(String(data.customFields[k]||''));
+      }
+    }
+    params.forEach(function(v,k){
+      if(!paramMap[k]&&k!=='contact_id'&&k!=='page_id'&&k.indexOf('utm_')!==0){
+        r['{{'+k+'}}']=esc(v);
+      }
+    });
+    var hasValues=false;
+    for(var key in r){if(r[key]){hasValues=true;break;}}
+    if(!hasValues)return;
+    var walker=document.createTreeWalker(document.body,NodeFilter.SHOW_TEXT,{
+      acceptNode:function(n){
+        var p=n.parentNode;
+        if(p&&skipTags[p.nodeName])return NodeFilter.FILTER_REJECT;
+        return NodeFilter.FILTER_ACCEPT;
+      }
+    });
+    var node;
+    while(node=walker.nextNode()){
+      var txt=node.nodeValue;
+      if(txt&&txt.indexOf('{{')>-1){
+        var changed=txt;
+        for(var ph in r){
+          if(r[ph]&&changed.indexOf(ph)>-1){
+            changed=changed.split(ph).join(r[ph]);
+          }
+        }
+        if(changed!==txt)node.nodeValue=changed;
+      }
+    }
+    var attrs=['value','placeholder','content','alt','title'];
+    attrs.forEach(function(attr){
+      var els=document.querySelectorAll('['+attr+'*="{{"]');
+      for(var i=0;i<els.length;i++){
+        var tag=els[i].tagName;
+        if(skipTags[tag])continue;
+        var val=els[i].getAttribute(attr);
+        if(val){
+          var nv=val;
+          for(var ph in r){
+            if(r[ph]&&nv.indexOf(ph)>-1){
+              nv=nv.split(ph).join(r[ph]);
+            }
+          }
+          if(nv!==val)els[i].setAttribute(attr,nv);
+        }
+      }
+    });
+  }
+  function run(){
+    if(contactId){
+      var xhr=new XMLHttpRequest();
+      xhr.open('GET','https://paymegpt.com/api/landing/context/'+encodeURIComponent(contactId)+'?page_id=2534');
+      xhr.onload=function(){
+        if(xhr.status===200){
+          try{
+            var resp=JSON.parse(xhr.responseText);
+            if(resp.success&&resp.contact){
+              var merged=resp.contact;
+              for(var k in fields){merged[k]=fields[k];}
+              doReplace(merged);
+              return;
+            }
+          }catch(e){}
+        }
+        if(hasUrlFields)doReplace(fields);
+      };
+      xhr.onerror=function(){if(hasUrlFields)doReplace(fields);};
+      xhr.send();
+    }else if(hasUrlFields){
+      doReplace(fields);
+    }
+  }
+  if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',run);}
+  else{run();}
+})();
+</script>
+<script data-payment>
+(function(){
+  var slug='DMzvi88Zh';
+  var apiBase='https://paymegpt.com';
+  function findEmail(){
+    var ids=['email','emailAddress','buyer-email','buyerEmail','user-email','userEmail','checkout-email','customer-email','contact-email'];
+    for(var i=0;i<ids.length;i++){var el=document.getElementById(ids[i]);if(el&&el.value&&el.value.includes('@'))return el.value.trim();}
+    var inputs=document.querySelectorAll('input[type="email"],input[name*="email"],input[placeholder*="email"],input[placeholder*="Email"]');
+    for(var j=0;j<inputs.length;j++){if(inputs[j].value&&inputs[j].value.includes('@'))return inputs[j].value.trim();}
+    return '';
+  }
+  function findName(){
+    var ids=['name','fullName','full-name','buyer-name','buyerName','customer-name','userName','user-name'];
+    for(var i=0;i<ids.length;i++){var el=document.getElementById(ids[i]);if(el&&el.value)return el.value.trim();}
+    var inputs=document.querySelectorAll('input[name*="name"]:not([name*="email"]):not([type="email"]),input[placeholder*="name"]:not([placeholder*="email"]):not([type="email"]),input[placeholder*="Name"]:not([type="email"])');
+    for(var j=0;j<inputs.length;j++){if(inputs[j].value)return inputs[j].value.trim();}
+    return '';
+  }
+  var __realProcessPayment=function(a,b,c,d,e){
+    var amountCents,email,productName,productDescription,customerName,quantity;
+    if(a&&typeof a==='object'){
+      amountCents=a.amountCents;email=a.email;productName=a.productName;
+      productDescription=a.productDescription||'';customerName=a.name||'';quantity=a.quantity||1;
+    }else{
+      amountCents=typeof a==='number'?a:0;productName=typeof b==='string'?b:'';
+      productDescription=typeof c==='string'?c:'';email='';customerName='';quantity=1;
+    }
+    if(!email)email=findEmail();
+    if(!customerName)customerName=findName();
+    if(!productName){alert('Product name is required.');return Promise.reject('no_product_name');}
+    if(!amountCents||amountCents<100){alert('Amount must be at least $1.00');return Promise.reject('invalid_amount');}
+    if(!email){alert('Please enter your email address.');return Promise.reject('no_email');}
+    var successBase=window.location.href.split('?')[0];
+    return fetch(apiBase+'/api/landing-pages/public/'+slug+'/payment/checkout',{
+      method:'POST',headers:{'Content-Type':'application/json'},
+      body:JSON.stringify({email:email,name:customerName,amountCents:amountCents,productName:productName,productDescription:productDescription,quantity:quantity,successUrl:successBase+'?payment=success&product='+encodeURIComponent(productName)+'&session_id={CHECKOUT_SESSION_ID}',cancelUrl:successBase+'?payment=cancelled'})
+    }).then(function(r){return r.json();}).then(function(d){
+      if(d.checkoutUrl){window.location.href=d.checkoutUrl;}
+      else{alert(d.error||'Failed to process payment');throw new Error(d.error);}
+    });
+  };
+  Object.defineProperty(window,'__processPayment',{value:__realProcessPayment,writable:false,configurable:false});
+  document.addEventListener('DOMContentLoaded',function(){
+    var urlParams=new URLSearchParams(window.location.search);
+    if(urlParams.get('payment')==='success'){
+      var pName=urlParams.get('product')||'your item';
+      var overlay=document.createElement('div');overlay.id='payment-success-overlay';
+      overlay.style.cssText='position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,0.5);display:flex;align-items:center;justify-content:center;z-index:999999;font-family:system-ui,-apple-system,sans-serif;';
+      overlay.innerHTML='<div style="background:white;border-radius:16px;padding:40px;max-width:420px;width:90%;text-align:center;box-shadow:0 20px 60px rgba(0,0,0,0.15);"><div style="width:64px;height:64px;border-radius:50%;background:#dcfce7;margin:0 auto 20px;display:flex;align-items:center;justify-content:center;"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div><h2 style="margin:0 0 12px;font-size:24px;font-weight:700;color:#111827;">Payment Successful!</h2><p style="margin:0 0 24px;color:#6b7280;font-size:16px;">Thank you for purchasing '+pName.replace(/</g,'&lt;').replace(/>/g,'&gt;')+'.</p><button onclick="document.getElementById(\'payment-success-overlay\').remove();window.history.replaceState({},\'\',window.location.pathname);" style="padding:12px 32px;font-size:16px;font-weight:600;background:#16a34a;color:white;border:none;border-radius:8px;cursor:pointer;">Continue</button></div>';
+      document.body.appendChild(overlay);
+    }
+  });
+})();
+</script>  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="text-slate-800">
+  <!-- ============================================================================ -->
+  <!-- STICKY HEADER / NAVIGATION: Brand identity, primary navigation, appointment -->
+  <!-- Features: Sticky top bar, active page indicator, mobile-friendly spacing     -->
+  <!-- Mobile Padding: px-4 ensures text never touches viewport edges              -->
+  <!-- ============================================================================ -->
+  <header class="sticky top-0 z-50 bg-white/95 backdrop-blur border-b border-teal-100 shadow-sm" data-section="header">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 lg:px-12 py-4">
+      <div class="flex items-center justify-between gap-4">
+        <a href="index.html" class="flex items-center gap-3 min-w-0">
+          <div class="w-11 h-11 rounded-2xl bg-teal-700 text-white grid place-items-center shadow-md">🏥</div>
+          <div class="min-w-0">
+            <p class="brand-font text-lg sm:text-xl font-bold leading-tight text-teal-900 truncate">Klinik Syed Badaruddin</p>
+            <p class="text-xs sm:text-sm text-slate-500 truncate">Jalan Air Putih, Kg Gong Pauh, Kemaman</p>
+          </div>
+        </a>
+        <nav class="hidden lg:flex items-center gap-6 text-sm font-medium" aria-label="Navigasi utama">
+          <a class="nav-link hover:text-gold-700 transition" href="index.html">Laman Utama</a>
+          <a class="nav-link hover:text-gold-700 transition" href="about.html">Tentang Kami</a>
+          <a class="nav-link hover:text-gold-700 transition" href="services.html">Perkhidmatan</a>
+          <a class="nav-link nav-active" href="faq.html" aria-current="page">Soal Jawab</a>
+          <a class="nav-link hover:text-gold-700 transition" href="contact.html">Hubungi Kami</a>
+          <a href="contact.html" class="cta-button inline-flex items-center justify-center rounded-full bg-[#c9963c] px-5 py-3 text-white font-semibold shadow-lg shadow-gold-200 hover:brightness-95 transition">
+            Buat Temujanji
+          </a>
+        </nav>
+        <a href="contact.html" class="lg:hidden cta-button inline-flex items-center justify-center rounded-full bg-[#c9963c] px-4 py-2.5 text-white font-semibold shadow-md hover:brightness-95 transition">
+          Buat Temujanji
+        </a>
+      </div>
+      <div class="lg:hidden mt-4 flex flex-wrap gap-3 text-sm font-medium" aria-label="Navigasi mudah alih">
+        <a class="nav-link px-3 py-2 rounded-full bg-teal-50 text-teal-800" href="index.html">Laman Utama</a>
+        <a class="nav-link px-3 py-2 rounded-full bg-teal-50 text-teal-800" href="about.html">Tentang Kami</a>
+        <a class="nav-link px-3 py-2 rounded-full bg-teal-50 text-teal-800" href="services.html">Perkhidmatan</a>
+        <a class="nav-link px-3 py-2 rounded-full bg-[#c9963c]/10 text-[#c9963c] font-semibold" href="faq.html" aria-current="page">Soal Jawab</a>
+        <a class="nav-link px-3 py-2 rounded-full bg-teal-50 text-teal-800" href="contact.html">Hubungi Kami</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ============================================================================ -->
+    <!-- HERO SECTION: Main FAQ introduction with breadcrumb and supportive subtitle -->
+    <!-- Features: Teal gradient background, readable contrast, strong hierarchy      -->
+    <!-- Mobile Padding: generous padding keeps headline clear on small screens      -->
+    <!-- ============================================================================ -->
+    <section class="hero-section relative overflow-hidden bg-gradient-to-br from-teal-800 via-teal-700 to-teal-900 text-white" data-section="hero">
+      <div class="absolute inset-0 opacity-20 bg-[radial-gradient(circle_at_top_right,_rgba(201,150,60,0.8),_transparent_35%),radial-gradient(circle_at_bottom_left,_rgba(255,255,255,0.18),_transparent_35%)]"></div>
+      <div class="relative max-w-7xl mx-auto px-4 sm:px-6 md:px-8 lg:px-12 py-16 sm:py-20 lg:py-24">
+        <div class="max-w-3xl">
+          <nav class="text-sm text-teal-100/90 mb-4" aria-label="Breadcrumb">
+            <ol class="flex flex-wrap items-center gap-2">
+              <li><a href="index.html" class="hover:text-[#c9963c] transition">Laman Utama</a></li>
+              <li aria-hidden="true">/</li>
+              <li><span class="text-white font-semibold">Soalan Lazim</span></li>
+            </ol>
+          </nav>
+          <p class="inline-flex items-center rounded-full border border-white/20 bg-white/10 px-4 py-2 text-sm font-medium text-teal-50 mb-5">Klinik Syed Badaruddin • Kemaman, Terengganu</p>
+          <h1 class="brand-font text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight mb-5">Soalan Lazim</h1>
+          <p class="text-base sm:text-lg lg:text-xl text-teal-50/95 leading-relaxed max-w-2xl">Jawapan kepada soalan yang sering ditanya oleh pesakit kami — daripada waktu operasi, panel insurans, temujanji, hingga perkhidmatan rawatan harian.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================================ -->
+    <!-- FAQ ACCORDION SECTION: 10 expandable questions and answers                 -->
+    <!-- Features: Click-to-toggle accordion, clear typography, accessible buttons   -->
+    <!-- Mobile Padding: full-width spacing prevents clipping on compact screens     -->
+    <!-- ============================================================================ -->
+    <section class="faq-section" data-section="faq-list">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 lg:px-12 py-14 sm:py-16">
+        <div class="grid lg:grid-cols-12 gap-10 items-start">
+          <div class="lg:col-span-4">
+            <h2 class="brand-font text-3xl sm:text-4xl font-bold text-teal-900 mb-4">Soalan yang kerap ditanya</h2>
+            <p class="text-slate-600 leading-relaxed mb-6">Klik pada setiap soalan untuk melihat jawapan. Jika anda masih memerlukan penjelasan lanjut, pasukan kami sedia membantu melalui halaman Hubungi Kami.</p>
+            <div class="rounded-3xl bg-white border border-teal-100 shadow-sm p-6">
+              <p class="text-sm font-semibold text-[#c9963c] uppercase tracking-wider mb-2">Maklumat ringkas</p>
+              <p class="text-slate-700 leading-relaxed">Klinik kami menyediakan perkhidmatan kesihatan keluarga, rawatan am, antenatal, postnatal, sijil sakit, dan rujukan ke hospital pakar.</p>
+            </div>
+          </div>
+
+          <div class="lg:col-span-8 space-y-4">
+            <div class="faq-item active rounded-3xl bg-white border border-teal-100 shadow-sm overflow-hidden" data-accordion-item>
+              <button class="accordion-btn w-full text-left px-5 sm:px-6 py-5 flex items-start justify-between gap-4" aria-expanded="true">
+                <span class="font-semibold text-lg text-teal-950">1. Apakah waktu operasi klinik?</span>
+                <span class="accordion-icon text-[#c9963c] text-2xl leading-none">−</span>
+              </button>
+              <div class="faq-panel px-5 sm:px-6 max-h-40" style="max-height: 140px;">
+                <p class="pb-5 text-slate-600 leading-relaxed">Klinik dibuka Sabtu hingga Khamis dari 8:30 pagi hingga 10:00 malam. Klinik ditutup pada hari Jumaat.</p>
+              </div>
+            </div>
+
+            <div class="faq-item rounded-3xl bg-white border border-teal-100 shadow-sm overflow-hidden" data-accordion-item>
+              <button class="accordion-btn w-full text-left px-5 sm:px-6 py-5 flex items-start justify-between gap-4" aria-expanded="false">
+                <span class="font-semibold text-lg text-teal-950">2. Adakah klinik ini menerima pesakit panel insurans?</span>
+                <span class="accordion-icon text-[#c9963c] text-2xl leading-none">+</span>
+              </button>
+              <div class="faq-panel px-5 sm:px-6">
+                <p class="pb-5 text-slate-600 leading-relaxed">Ya, kami adalah klinik panel untuk beberapa syarikat insurans. Sila hubungi kami untuk pengesahan panel anda.</p>
+              </div>
+            </div>
+
+            <div class="faq-item rounded-3xl bg-white border border-teal-100 shadow-sm overflow-hidden" data-accordion-item>
+              <button class="accordion-btn w-full text-left px-5 sm:px-6 py-5 flex items-start justify-between gap-4" aria-expanded="false">
+                <span class="font-semibold text-lg text-teal-950">3. Perlukah saya buat temujanji?</span>
+                <span class="accordion-icon text-[#c9963c] text-2xl leading-none">+</span>
+              </button>
+              <div class="faq-panel px-5 sm:px-6">
+                <p class="pb-5 text-slate-600 leading-relaxed">Walk-in diterima, tetapi temujanji digalakkan untuk mengurangkan masa menunggu dan memastikan urusan lebih lancar.</p>
+              </div>
+            </div>
+
+            <div class="faq-item rounded-3xl bg-white border border-teal-100 shadow-sm overflow-hidden" data-accordion-item>
+              <button class="accordion-btn w-full text-left px-5 sm:px-6 py-5 flex items-start justify-between gap-4" aria-expanded="false">
+                <span class="font-semibold text-lg text-teal-950">4. Apakah kaedah pembayaran?</span>
+                <span class="accordion-icon text-[#c9963c] text-2xl leading-none">+</span>
+              </button>
+              <div class="faq-panel px-5 sm:px-6">
+                <p class="pb-5 text-slate-600 leading-relaxed">Kami menerima tunai, kad debit, kad kredit, serta pembayaran melalui panel yang berkenaan.</p>
+              </div>
+            </div>
+
+            <div class="faq-item rounded-3xl bg-white border border-teal-100 shadow-sm overflow-hidden" data-accordion-item>
+              <button class="accordion-btn w-full text-left px-5 sm:px-6 py-5 flex items-start justify-between gap-4" aria-expanded="false">
+                <span class="font-semibold text-lg text-teal-950">5. Adakah klinik sesuai untuk kanak-kanak?</span>
+                <span class="accordion-icon text-[#c9963c] text-2xl leading-none">+</span>
+              </button>
+              <div class="faq-panel px-5 sm:px-6">
+                <p class="pb-5 text-slate-600 leading-relaxed">Ya, kami menerima pesakit dari semua peringkat umur termasuk bayi, kanak-kanak, dewasa, dan warga emas.</p>
+              </div>
+            </div>
+
+            <div class="faq-item rounded-3xl bg-white border border-teal-100 shadow-sm overflow-hidden" data-accordion-item>
+              <button class="accordion-btn w-full text-left px-5 sm:px-6 py-5 flex items-start justify-between gap-4" aria-expanded="false">
+                <span class="font-semibold text-lg text-teal-950">6. Bagaimana untuk dapat sijil sakit (MC)?</span>
+                <span class="accordion-icon text-[#c9963c] text-2xl leading-none">+</span>
+              </button>
+              <div class="faq-panel px-5 sm:px-6">
+                <p class="pb-5 text-slate-600 leading-relaxed">Doktor perlu membuat pemeriksaan terlebih dahulu sebelum sijil sakit (MC) dikeluarkan mengikut keadaan pesakit.</p>
+              </div>
+            </div>
+
+            <div class="faq-item rounded-3xl bg-white border border-teal-100 shadow-sm overflow-hidden" data-accordion-item>
+              <button class="accordion-btn w-full text-left px-5 sm:px-6 py-5 flex items-start justify-between gap-4" aria-expanded="false">
+                <span class="font-semibold text-lg text-teal-950">7. Adakah perkhidmatan antenatal tersedia?</span>
+                <span class="accordion-icon text-[#c9963c] text-2xl leading-none">+</span>
+              </button>
+              <div class="faq-panel px-5 sm:px-6">
+                <p class="pb-5 text-slate-600 leading-relaxed">Ya, perkhidmatan antenatal dan postnatal tersedia untuk membantu penjagaan ibu serta bayi dengan lebih teratur.</p>
+              </div>
+            </div>
+
+            <div class="faq-item rounded-3xl bg-white border border-teal-100 shadow-sm overflow-hidden" data-accordion-item>
+              <button class="accordion-btn w-full text-left px-5 sm:px-6 py-5 flex items-start justify-between gap-4" aria-expanded="false">
+                <span class="font-semibold text-lg text-teal-950">8. Bolehkah saya dapatkan rujukan ke hospital pakar?</span>
+                <span class="accordion-icon text-[#c9963c] text-2xl leading-none">+</span>
+              </button>
+              <div class="faq-panel px-5 sm:px-6">
+                <p class="pb-5 text-slate-600 leading-relaxed">Ya, doktor akan memberikan surat rujukan jika rawatan lanjut di hospital pakar diperlukan.</p>
+              </div>
+            </div>
+
+            <div class="faq-item rounded-3xl bg-white border border-teal-100 shadow-sm overflow-hidden" data-accordion-item>
+              <button class="accordion-btn w-full text-left px-5 sm:px-6 py-5 flex items-start justify-between gap-4" aria-expanded="false">
+                <span class="font-semibold text-lg text-teal-950">9. Di mana lokasi tepat klinik?</span>
+                <span class="accordion-icon text-[#c9963c] text-2xl leading-none">+</span>
+              </button>
+              <div class="faq-panel px-5 sm:px-6">
+                <p class="pb-5 text-slate-600 leading-relaxed">Klinik Syed Badaruddin terletak di Jalan Air Putih, Kg Gong Pauh, 24000 Kemaman, Terengganu.</p>
+              </div>
+            </div>
+
+            <div class="faq-item rounded-3xl bg-white border border-teal-100 shadow-sm overflow-hidden" data-accordion-item>
+              <button class="accordion-btn w-full text-left px-5 sm:px-6 py-5 flex items-start justify-between gap-4" aria-expanded="false">
+                <span class="font-semibold text-lg text-teal-950">10. Adakah klinik menerima KAD Sejahtera?</span>
+                <span class="accordion-icon text-[#c9963c] text-2xl leading-none">+</span>
+              </button>
+              <div class="faq-panel px-5 sm:px-6">
+                <p class="pb-5 text-slate-600 leading-relaxed">Ya, kami adalah pembekal panel KAD Sejahtera. Sila bawa dokumen berkaitan untuk semakan kelayakan.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================================ -->
+    <!-- CTA SECTION: Clear conversion area for follow-up contact and appointments   -->
+    <!-- Features: Gold button, concise messaging, high contrast and easy access     -->
+    <!-- Mobile Padding: roomy spacing keeps CTA readable and tappable               -->
+    <!-- ============================================================================ -->
+    <section class="cta-section" data-section="cta">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 lg:px-12 pb-16 sm:pb-20">
+        <div class="rounded-3xl bg-gradient-to-r from-teal-800 to-teal-700 text-white p-8 sm:p-10 lg:p-12 shadow-xl overflow-hidden relative">
+          <div class="absolute right-0 top-0 w-64 h-64 bg-[#c9963c]/15 rounded-full blur-3xl translate-x-1/3 -translate-y-1/3"></div>
+          <div class="relative flex flex-col lg:flex-row lg:items-center lg:justify-between gap-6">
+            <div class="max-w-2xl">
+              <h2 class="brand-font text-3xl sm:text-4xl font-bold mb-3">Masih ada soalan?</h2>
+              <p class="text-teal-50/95 text-base sm:text-lg leading-relaxed">Hubungi kami untuk mendapatkan maklumat lanjut tentang rawatan, panel, temujanji, atau keperluan kesihatan keluarga anda.</p>
+            </div>
+            <div>
+              <a href="contact.html" class="cta-button inline-flex items-center justify-center rounded-full bg-[#c9963c] px-6 py-3.5 text-white font-bold shadow-lg hover:brightness-95 transition">
+                Hubungi Kami
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============================================================================ -->
+  <!-- FOOTER SECTION: Navigation, social link, address, operating hours, copyright -->
+  <!-- Features: Consistent brand colors, quick links, trust-building information    -->
+  <!-- Mobile Padding: ensured by responsive container padding                      -->
+  <!-- ============================================================================ -->
+  <footer class="border-t border-teal-100 bg-white" data-section="footer">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 lg:px-12 py-12">
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div>
+          <p class="brand-font text-2xl font-bold text-teal-900 mb-3">Klinik Syed Badaruddin</p>
+          <p class="text-slate-600 leading-relaxed">Perkhidmatan penjagaan kesihatan yang mesra keluarga di Kemaman dengan pendekatan profesional dan prihatin.</p>
+        </div>
+        <div>
+          <h3 class="font-bold text-teal-900 mb-3">Pautan</h3>
+          <ul class="space-y-2 text-slate-600">
+            <li><a class="hover:text-[#c9963c] transition" href="index.html">Laman Utama</a></li>
+            <li><a class="hover:text-[#c9963c] transition" href="about.html">Tentang Kami</a></li>
+            <li><a class="hover:text-[#c9963c] transition" href="services.html">Perkhidmatan</a></li>
+            <li><a class="hover:text-[#c9963c] transition font-semibold text-teal-800" href="faq.html">Soal Jawab</a></li>
+            <li><a class="hover:text-[#c9963c] transition" href="contact.html">Hubungi Kami</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="font-bold text-teal-900 mb-3">Hubungi</h3>
+          <ul class="space-y-2 text-slate-600">
+            <li>Facebook: <a class="hover:text-[#c9963c] transition" href="#" aria-label="Facebook Klinik Syed Badaruddin">Klinik Syed Badaruddin</a></li>
+            <li>Jalan Air Putih, Kg Gong Pauh</li>
+            <li>24000 Kemaman, Terengganu</li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="font-bold text-teal-900 mb-3">Waktu Operasi</h3>
+          <ul class="space-y-2 text-slate-600">
+            <li>Sabtu – Khamis: 8:30 pagi – 10:00 malam</li>
+            <li>Jumaat: Tutup</li>
+          </ul>
+        </div>
+      </div>
+      <div class="mt-10 pt-6 border-t border-teal-100 flex flex-col sm:flex-row gap-3 items-start sm:items-center justify-between text-sm text-slate-500">
+        <p>© 2026 Klinik Syed Badaruddin. Semua hak terpelihara.</p>
+        <p class="text-slate-500">Klinik panel insurans • KAD Sejahtera • Temujanji mesra pesakit</p>
+      </div>
+    </div>
+  </footer>
+
+  
+  <script src="script.js"></script>
+</body>
+</html>
